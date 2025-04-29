@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Checker System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Resume Checker System</h1>
+      <nav>
+        <button id="navResume" class="active">Check Resumes</button>
+        <button id="navRubric">Manage Rubrics</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Resume Checker Section -->
+      <section id="resumeChecker" class="active-section">
+        <h2>Resume Evaluation</h2>
+        <form id="resumeForm" class="card">
+          <div class="form-group">
+            <label>Select Rubrics (Multiple)</label>
+            <div id="rubricCheckboxes" class="checkbox-container">
+              <!-- Rubrics will be loaded here -->
+              <p class="loading-message">Loading rubrics...</p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Upload Resumes (Max: 10 files)</label>
+            <div class="file-upload">
+              <input type="file" id="resumeFiles" multiple accept="application/pdf">
+              <p class="file-info">No files selected</p>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Check Resumes</button>
+        </form>
+        
+        <div id="statusMessage" class="status-message"></div>
+        
+        <div id="resultsContainer" class="results-container">
+          <!-- Results will be displayed here -->
+        </div>
+        <!-- Add below your results container -->
+        <div id="excelDownload" class="excel-download-section" style="display: none;"></div>
+
+      </section>
+
+      <!-- Rubric Manager Section -->
+      <section id="rubricManager">
+        <h2>Rubric Manager</h2>
+        <form id="rubricForm" class="card">
+          <div class="form-group">
+            <label for="rubricName">Rubric Name</label>
+            <input type="text" id="rubricName" placeholder="e.g. 'CS Dept 2025'" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Rubric File (PDF or .txt)</label>
+            <div class="file-upload">
+              <input type="file" id="rubricFile" accept=".txt,application/pdf" required>
+              <p class="file-info">No file selected</p>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-success">Save Rubric</button>
+        </form>
+        
+        <div id="rubricStatusMessage" class="status-message"></div>
+        
+        <div class="card">
+          <h3>Saved Rubrics</h3>
+          <ul id="savedRubrics" class="rubric-list">
+            <!-- Saved rubrics will be displayed here -->
+            <li class="loading-message">Loading rubrics...</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- <script src="scripts.js"></script> -->
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

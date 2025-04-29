@@ -1,0 +1,13 @@
+{
+  "must_have": [
+    "Degree: First Division MS (18 years of education) from an HEC recognized Institution",
+    "Field of study must be one of: Artificial Intelligence, Human-Computer Interaction, Data Sciences, Cloud Computing, Machine Learning, Software Engineering, Cyber Security, Information Security, Big data analytics"
+  ],
+  "optional": [
+    "Preferred: BS in Computer Sciences (Software Engineering, Computer Engineering, Artificial Intelligence, Data Sciences, Cyber Security)"
+  ],
+  "experience": [],
+  "notes": [
+    "Age limit: 35 years"
+  ]
+}
