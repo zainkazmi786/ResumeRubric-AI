@@ -1,6 +1,4 @@
-Here's a complete `README.md` for your project, covering all setup instructions, usage, and limitations. I've also suggested a professional and descriptive project name at the top.
 
----
 
 # **ResumeRubric AI** 🧠📄  
 An intelligent resume evaluator that checks candidate resumes against multiple job-specific rubrics using LLMs via the Groq API.
@@ -45,7 +43,7 @@ cd ResumeRubric-ai
 ### 2. Create and Activate a Virtual Environment
 ```bash
 python -m venv myenv
-source myenv/bin/activate  # or `myenv\Scripts\activate` on Windows
+myenv\Scripts\activate.ps1 # `source myenv/bin/activate` on Linux
 ```
 
 ### 3. Install Requirements
